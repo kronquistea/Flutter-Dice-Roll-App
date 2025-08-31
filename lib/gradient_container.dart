@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:first_app/styled_text.dart';
+
 // Creating a custom widget
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
@@ -7,25 +9,19 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 255, 72, 0),
-                Color.fromARGB(255, 244, 121, 83)
-              ],
-              begin: Alignment.topLeft,
-              end: AlignmentGeometry.bottomRight,
-            ),
-          ),
-          child: const Center(
-            child: Text(
-              'Hello World!',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-              ),
-            ),
-          ),
-        );
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color.fromARGB(255, 255, 72, 0),
+            Color.fromARGB(255, 244, 121, 83)
+          ],
+          begin: Alignment.topLeft,
+          end: AlignmentGeometry.bottomRight,
+        ),
+      ),
+      child: const Center(
+        child: StyledText(),
+      ),
+    );
   }
 }
